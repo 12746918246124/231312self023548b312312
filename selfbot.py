@@ -133,7 +133,7 @@ class Selfbot(commands.Bot):
         ---------------
         '''))
 
-        #await self.change_presence(status=discord.Status.invisible, afk=True)
+        await self.change_presence(status=discord.Game(name="I am watching you!"))
 
     async def on_command(self, ctx):
         cmd = ctx.command.qualified_name.replace(' ', '_')
